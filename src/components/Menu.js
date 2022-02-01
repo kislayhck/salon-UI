@@ -1,35 +1,59 @@
-import { Link } from "react-router-dom";
-import { Nav, Container } from "react-bootstrap";
+import { Link } from 'react-router-dom';
+import { Nav, Container } from 'react-bootstrap';
 
 const Menu = () => {
   return (
-    <Container>
-      <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-        <Link
-          to="/"
-          className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none"
-        >
-          Template
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container-fluid">
+        <Link to="/" className="navbar-brand">
+          My Salon
         </Link>
-        <Nav>
-          <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li>
-              <Link to="/about" className="nav-link px-2 link-secondary">
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav mb-2 mb-lg-0 ms-auto">
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Account
+              </a>
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Login
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Another action
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li className="nav-item">
+              <Link to="about" className="nav-link" href="#">
                 About
               </Link>
             </li>
           </ul>
-
-          <div className="col-md-3 text-end">
-            <Link to="/">
-              <button type="button" className="btn btn-outline-primary me-2">
-                Documentation
-              </button>
-            </Link>
-          </div>
-        </Nav>
-      </header>
-    </Container>
+        </div>
+      </div>
+    </nav>
   );
 };
 

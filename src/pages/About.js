@@ -1,17 +1,9 @@
-import Header from '../components/Header'
-import Meta from '../components/Meta'
-
 const About = () => {
-  // page content
-  const pageTitle = 'About'
-  const pageDescription = 'welcome to react bootstrap template'
-
   return (
-    <div>
-      <Meta title={pageTitle}/>
-      <Header head={pageTitle} description={pageDescription} />
+    <div className="text-center mt-5">
+      <h2>About Us</h2>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
